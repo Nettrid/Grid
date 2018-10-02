@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace TroiaStudio\DataGrid;
+namespace Nettrid\DataGrid;
 
 use Nettrid\DataGrid\Columns\ColumnText;
 

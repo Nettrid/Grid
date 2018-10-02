@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace TroiaStudio\DataGrid\Columns;
+namespace Nettrid\DataGrid\Columns;
 
 use Nettrid\DataGrid\IColumn;
 
@@ -17,10 +17,16 @@ abstract class Column implements IColumn
      */
     private $label;
 
-    public function __construct(string $name, string $label)
+    /**
+     * @var IColumn[]
+     */
+    private $children;
+
+    public function __construct(string $name, string $label, array $children = [])
     {
         $this->name = $name;
         $this->label = $label;
+        $this->children = $children;
     }
 
     /**
@@ -53,5 +59,28 @@ abstract class Column implements IColumn
     public function setLabel(string $label): void
     {
         $this->label = $label;
+    }
+
+    private function addChild(IColumn $column): void
+    {
+        $this->children[] = $column;
+    }
+
+    /**
+     * @return IColumn[]
+     */
+    public function getChildren(): array
+    {
+        return $this->children;
+    }
+
+    /**
+     * @param IColumn[] $children
+     */
+    public function setChildren(array $children): void
+    {
+        foreach ($children as $child) {
+            $this->addChild($child);
+        }
     }
 }

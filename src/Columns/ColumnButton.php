@@ -3,9 +3,10 @@ declare(strict_types=1);
 
 namespace Nettrid\DataGrid\Columns;
 
-class ColumnText extends Column
+class ColumnButton extends Column
 {
-    public static function create(string $name, string $label = ''): ColumnText
+
+    public static function create(string $name, string $label = ''): ColumnButton
     {
         $column = new self;
         $column->setName($name);
@@ -13,4 +14,5 @@ class ColumnText extends Column
 
         return $column;
     }
+
 }
