@@ -9,7 +9,7 @@ class ColumnText extends Column
     {
         $column = new self;
         $column->setName($name);
-        $column->setName($label);
+        $column->setLabel($label);
 
         return $column;
     }
