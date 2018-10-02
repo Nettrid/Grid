@@ -2,7 +2,7 @@
     "name": "nettrid/grid",
     "description": "Lightweight datagrid",
     "type": "library",
-    "license": "GNU General Public License v3.0",
+    "license": "GPL v3.0",
     "authors": [
         {
             "name": "Jan Galek",
