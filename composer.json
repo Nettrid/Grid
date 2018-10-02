@@ -1,0 +1,22 @@
+{
+    "name": "nettrid/grid",
+    "description": "Lightweight datagrid",
+    "type": "library",
+    "license": "GNU General Public License v3.0",
+    "authors": [
+        {
+            "name": "Jan Galek",
+            "email": "admin@gcore.cz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nettrid\\DataGrid\\": "src"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+      "php": ">=7.1",
+        "nette/application": "^2.4"
+    }
+}
